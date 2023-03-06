@@ -1,0 +1,31 @@
+//Anonymous Inner Class : without using any implement method of interface class.
+//Anonymous Inner Class using by Takig the user input and parameter calling
+
+import java.util.*;
+interface AI{
+   // int a=20,b=30 //static , final ,public
+    public int sum(int a,int b);//abstraction
+    public void Distence(int a,int b,int c,int d);
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		AI obj=new AI(){
+		public int sum(int a , int b){//Over riding the method
+		    return a+b;
+		}
+		
+		//how many methods are present in the interface we have t over ridr the all methods of the interface
+		public void Distence(int a,int b,int c,int d){
+		    System.out.println(Math.sqrt((a-c)*(a-c)+(b-d)*(b-d)));
+		}
+		
+		};  //AI object creation ended
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println(obj.sum(sc.nextInt(),sc.nextInt()));
+		obj.Distence(sc.nextInt(),sc.nextInt(),sc.nextInt(),sc.nextInt());//Calling the object to print
+	}
+}
